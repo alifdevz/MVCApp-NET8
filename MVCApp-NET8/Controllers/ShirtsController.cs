@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MVCApp_NET8.Models;
+using System.Drawing;
 
 namespace MVCApp_NET8.Controllers
 {
@@ -19,7 +21,7 @@ namespace MVCApp_NET8.Controllers
         }
 
         [HttpPost]
-        public string CreateShirt()
+        public string CreateShirt([FromBody]Shirt shirt) // Using [FromBody] to bind form data to the Shirt model
         {
             return "Creating a new shirt";
         }
